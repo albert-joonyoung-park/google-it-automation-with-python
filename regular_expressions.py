@@ -58,5 +58,6 @@ print(re.search(r"[^a-zA-Z]", "This is a sentence with spaces."))  # <re.Match o
 print(re.search(r"[^a-zA-Z ]", "This is a sentence with spaces."))  # <re.Match object; span=(30, 31), match='.'>
 
 # |(pipe) to match either This of That expressions
-print(re.search(r"[cat|dog ]", "I like cats."))  # <re.Match object; span=(30, 31), match='.'>
-print(re.search(r"[cat|dog ]", "I like dogs."))  # <re.Match object; span=(30, 31), match='.'>
+print(re.search(r"cat|dog", "I like cats."))  # <re.Match object; span=(7, 10), match='cat'>
+print(re.search(r"cat|dog", "I like dogs."))  # <re.Match object; span=(7, 10), match='dog'>
+
